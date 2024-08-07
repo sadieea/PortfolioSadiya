@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadiya Ansari - Portfolio</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: rgb(125, 179, 179) ;
+
+}
+
+header {
+    background-color: #2c3e50;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 4rem;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://images.hdqwalls.com/wallpapers/planets-cosmos-4k-mx.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color:azure
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2980b9;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 2rem;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.skills-grid, .achievements-grid, .interests-grid, .projects-grid, .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.skill-item, .achievement-item, .interest-item, .project-item, .contact-item {
+    background-color: #ecf0f1;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover, .achievement-item:hover, .interest-item:hover, .project-item:hover, .contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.research-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.research-item {
+    flex: 0 0 45%;
+    text-align: center;
+    margin-bottom: 1rem;
+    background-color: #ecf0f1;
+    padding: 1rem;
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Icons */
+i {
+    margin-right: 0.5rem;
+    color: #3498db;
+}
+
+.contact-item a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .research-items {
+        flex-direction: column;
+    }
+
+    .research-item {
+        flex: 0 0 100%;
+    }
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-item h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.project-item p {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-link {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #2980b9;
+}
+
+.project-link i {
+    margin-left: 0.5rem;
+    color: #fff;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Sadiya Ansari</h1>
+                <p>AI and Data Science Student | Tech Enthusiast | Lifelong Learner</p>
+                <a href="#about" class="cta-button">Learn More</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="data:image/jpeg;base64,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" alt="Sadiya Ansari" class="profile-image">
+                <p>I am a student of Artificial Intelligence and Data Science at Anjuman College of Engineering and Technology, Nagpur. I am passionate about technology and constantly strive to expand my knowledge and skills in various fields, including Quantum Computing and Computer Vision.</p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-graduation-cap"></i>
+                    <strong>Anjuman College of Engineering and Technology, Nagpur</strong>
+                    <p>AI and Data Science</p>
+                </li>
+                <li>
+                    <i class="fas fa-school"></i>
+                    <strong>Seventh-Day Adventist Higher Secondary School, Nagpur</strong>
+                    <p>97.2%</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item"><i class="fas fa-brain"></i>Critical Thinking</div>
+                <div class="skill-item"><i class="fas fa-users"></i>Team Management</div>
+                <div class="skill-item"><i class="fas fa-crown"></i>Leadership</div>
+                <div class="skill-item"><i class="fas fa-puzzle-piece"></i>Problem Solving</div>
+            </div>
+        </section>
+
+        <section id="interests">
+            <h2>Interests</h2>
+            <div class="interests-grid">
+                <div class="interest-item"><i class="fas fa-robot"></i>Machine Learning</div>
+                <div class="interest-item"><i class="fas fa-microchip"></i>Robotics</div>
+                <div class="interest-item"><i class="fas fa-eye"></i>Computer Vision</div>
+                <div class="interest-item"><i class="fas fa-atom"></i>Quantum Computing</div>
+            </div>
+        </section>
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <i class="fas fa-chess"></i>
+                    <h3>Chess Champion</h3>
+                    <p>Regional Chess Tournament Winner</p>
+                </div>
+                <div class="achievement-item">
+                    <i class="fas fa-table-tennis"></i>
+                    <h3>Table Tennis Star</h3>
+                    <p>College Table Tennis Team Captain</p>
+                </div>
+                <div class="achievement-item">
+                    <i class="fas fa-palette"></i>
+                    <h3>International Painting Contest</h3>
+                    <p>Finalist in Global Art Challenge</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research</h2>
+            <div class="research-items">
+                <div class="research-item">
+                    <i class="fas fa-atom"></i>
+                    <h3>Quantum Computing Researcher</h3>
+                    <p>Exploring quantum algorithms for optimization problems</p>
+                </div>
+                <div class="research-item">
+                    <i class="fas fa-eye"></i>
+                    <h3>Computer Vision Researcher</h3>
+                    <p>Developing advanced image recognition techniques</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <img src="https://th.bing.com/th/id/OIP.mVO2506lg7m9TqEaVUXXawAAAA?rs=1&pid=ImgDetMain" alt="Falcon-9 Launch Prediction Model" class="project-image">
+                    <h3>Falcon-9 Launch ML Prediction Model</h3>
+                    <p>Developed a machine learning model to predict Falcon-9 launch success rates.</p>
+                    <a href="https://github.com/sugatagh/SpaceX-Falcon-9-First-Stage-Landing-Prediction" class="project-link" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="project-item">
+                    <img src="https://wallpaperbat.com/img/164105-machine-learning-smart-brain-wallpaper-artificial-intelligence.jpg" alt="ChatGPT Clone" class="project-image">
+                    <h3>ChatGPT Clone</h3>
+                    <p>Created a conversational AI model inspired by ChatGPT using natural language processing techniques.</p>
+                    <a href="https://github.com/topics/chatgpt-clone" class="project-link" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="project-item">
+                    <img src="https://th.bing.com/th/id/R.4f8e273eb75995e59a7ccd66ae5f352d?rik=yeRvi9RR4%2bBjsQ&riu=http%3a%2f%2fwww.scientificanimations.com%2fwp-content%2fuploads%2f2017%2f12%2fParkinson%e2%80%99s-Disease.jpg&ehk=mwzVrjDECXevxsw7XtFnRGwZMtvo3hb0lPJo76G5gVw%3d&risl=&pid=ImgRaw&r=0" alt="Parkinson's Disease Prediction Model" class="project-image">
+                    <h3>Parkinson's Disease Prediction Model</h3>
+                    <p>Designed a prediction model using Machine Learning, Artificial Neural Networks, and Quantum Computing algorithms.</p>
+                    <a href="https://github.com/ahmadmardeni1/Parkinson-Prediction" class="project-link" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-laptop-code"></i>
+                    <strong>Full Stack Developer Intern - Nass Technology</strong>
+                    <p>Developed web applications using modern technologies</p>
+                </li>
+                <li>
+                    <i class="fas fa-chart-bar"></i>
+                    <strong>Data Science Intern - CodSoft</strong>
+                    <p>Analyzed large datasets and created predictive models</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/sadiyaansari2324" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <a href="mailto:sadiya.ansari@example.com">ansarisadiya2004@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <a href="tel:+911234567890">+91 8806000679</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sadiya Ansari. All rights reserved.</p>
+    </footer>
+</body>
+</html>
